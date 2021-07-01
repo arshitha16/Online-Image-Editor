@@ -1,0 +1,37 @@
+<%- include("../partials/Steg/header") %>
+<%- include("../partials/Steg/navbar") %>
+<div class="cont" id="imageinimage">
+		<h2>
+			Steganography <i class="fas fa-key fa-sm"></i>
+		</h2>
+		<div class="ui divider" id="hr"></div>
+        <div class="img-cont">
+			  <div  class="img1">
+				<h5>Cover Image</h5>
+				<canvas id="fgcan" class="canvas"></canvas>
+				<input class="ui secondary button" type="file" name="pic" accept="image/*" id="fgfile" onchange="loadForegroundImage()"/>
+			  </div>
+
+			  <div class="" id="encodedimg">
+				<h5>Secret Image</h5>
+				<canvas id="bgcan" class="canvas"></canvas>
+				<input class="ui secondary button" type="file" name="pic" accept="image/*" id="bgfile" onchange="loadBackgroundImage()"/>
+				  <button class="ui secondary button" onclick="HidenCombine()"><i class="eye slash icon"></i>Hide</button>
+			  </div>
+        </div>
+        <div class="img-cont">
+				<div  class="img1">
+				<h5>Combined Image</h5>
+				<canvas id="ccan" class="canvas"></canvas>
+				<button class="negative ui button" onclick="download_image()"><i class="cloud download icon"></i>Download</button>
+			  </div>
+
+			  <div class="" id="encodedimg">
+				<h5>Secret Image<sub>(To Extract the hidden image upload your <q>steg_image</q>)</sub></h5>
+				<canvas id="hcan" class="canvas"></canvas>
+				 <input class="ui secondary button" type="file" name="pic" accept="image/*" id="hfile" onchange="loadComImage()" />
+				 <button class="ui secondary button" onclick="Hide()"><i class="eye icon"></i>Extract</button>
+			  </div>
+		</div>
+</div>
+<%- include("../partials/Steg/footer") %>

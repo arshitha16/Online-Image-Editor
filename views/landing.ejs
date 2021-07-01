@@ -1,0 +1,35 @@
+<%- include("partials/Img/header") %>
+<link rel="stylesheet" href="../../css/landing.css">
+<section class="sec">
+	<header>
+		<a href="/" class="logo"><i class="fas fa-paint-brush fa-2x"></i></a>
+		<ul>
+			<% if(!currentUser){ %>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Signup</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			<% } else{ %>
+				<li><a href="#">Hi, <%= currentUser.username %></a></li>
+				<li><a href="/Greenscreen">Greenscreen</a></li>
+				<li><a href="/steganography">Steganography</a></li>
+				<li><a href="/logout">Logout</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			<% } %>
+		</ul>
+	</header>
+	<div class="content">
+		<div class="textBox">
+			<h2>Image Filters</h2>
+			<q>
+				Everything you can imagine is real
+			</q>
+			<br>
+			<a href="/Images">Get started</a>
+		</div>
+	</div>
+	<div class="imgBox">
+		<img src="https://media.giphy.com/media/QAgNT0Wf8zBSufkGip/giphy.gif" class="image1">
+	</div>
+</section>
+<%- include("partials/Img/Foot") %>
+<%- include("partials/Img/footer") %>

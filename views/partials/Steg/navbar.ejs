@@ -1,0 +1,34 @@
+<div class="ui secondary menu" id="menu">
+				  <a class="active item" href="/">
+					<i class="fas fa-paint-brush fa-2x"></i>
+				  </a>
+				  <a class="item" href="/steganography/text">
+					text-in-image
+				  </a>
+				  <a class="item" href="/steganography">
+						image-in-image
+				  </a>
+				  <div class="right menu">
+					<% if(!currentUser){ %>
+					  	<a class="ui item" href="/login">
+						  Login
+						</a>
+						<a class="ui item" href="/register">
+						   Signup
+						</a>
+					<% } else{ %>
+					  	<a class="ui item" href="/">
+						  Hi, <%= currentUser.username %>
+						</a>
+					  	<a class="ui item" href="/Images">
+						  Filters
+						</a>
+					  	<a class="ui item" href="/greenscreen">
+						  Greenscreen
+						</a>
+						<a class="ui item" href="/logout">
+						  Logout
+						</a>
+					<% } %>
+				  </div>
+</div>

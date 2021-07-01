@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Gafata|Montez|Averia+Sans+Libre|Vampiro+One:200,300,400,500,600,700,800,900&family=Roboto&display=swap');
+body
+{
+	font-family: 'Roboto',sans-serif;
+     background: #66FCF1;
+}
+#menu a
+{
+	color: #0B0C10;
+	font-weight: 400;
+}
+#menu a:hover
+{
+	color:#eb2f06;
+}
+h2
+{
+	font-size: 4em;
+	line-height: 1.5em;
+	font-weight: 900;
+	text-align: center;
+  font-family: 'Montez';
+   color: darken(black, 20%);
+}
+.cont {
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-cont {
+    margin-top: 5rem;
+    display: flex;
+
+}
+
+.img1 {
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+}
+
+img {
+    width: 300px;
+}
+
+
+.opa {
+    opacity: 0;
+    width: 10px;
+}
+
+canvas {
+	padding-left: 0;
+    padding-right: 0;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  	height: 300px;
+  	border: 2px outset #0B0C10;
+  	color: #0B0C10;
+}
+#decoded
+{
+	width: auto; 
+    float: left; 
+    font-size: 5em;
+    margin: 2% auto;
+    display: block;
+}
+h6
+{
+	color: #0B0C10;
+	text-align: center;
+}
+#image3
+{
+	margin-bottom: 5%;
+}
+.decode
+{
+	margin-top: 3%;
+}
+#imageinimage
+{
+	margin-top: 20%;
+}
+
+#hr{
+    overflow: visible;
+    padding: 0;
+	margin-bottom: 2%;
+    border: none;
+    border-top: medium double #0B0C10;
+    color: #0B0C10;
+    text-align: center;
+	top: -2em;
+	position: relative;
+}
+#hr:after {
+    content: "☂☂☂";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+	color: #0B0C10;
+    background: #66FCF1;
+}

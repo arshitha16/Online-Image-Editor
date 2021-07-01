@@ -1,0 +1,39 @@
+
+<%- include("../partials/Img/header") %>
+<%- include("../partials/Img/navbar") %>
+<section class="section my-4">
+	<div class="container text-center">
+		<div class="title py-5">
+			<% if(!currentUser){ %>
+				<h1>
+					Gallery <i class="fas fa-camera-retro fa-sm"></i>
+				</h1>
+				<hr>
+			<% } else{ %>
+				<h1>
+					<%= currentUser.username %>'s Gallery <i class="fas fa-camera-retro fa-sm"></i>
+				</h1>
+				<hr>
+			<% } %>
+			<a href="/Images/new" class="btn btn-outline-dark btn-lg" role="button" data-bs-toggle="button"><i class="fas fa-cloud-upload-alt"></i> Upload</a>
+		</div>
+	</div>
+</section>
+
+<div class="container">
+	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+					<% images.forEach(function(image){ %> 
+							<% if(image.imageBase64){ %>
+								<div class="col-md-3 col-sm-6">
+									<div class="thumbnail">
+									<% if(currentUser && image.author.id.equals(currentUser._id)){ %>
+										<img src="data:image/<%= image.contentType %>;base64,<%= image.imageBase64 %>" class="card-img-top" class="img-fluid">
+										<a class="btn btn-outline-dark" href="/Images/<%= image.id %>"><i class="far fa-eye"></i> show</a>
+									<% } %>
+									</div>
+								</div>
+							<% } %>
+					<% }) %>
+	</div>
+</div>
+<%- include("../partials/Img/footer") %>

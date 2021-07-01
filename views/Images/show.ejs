@@ -1,0 +1,11 @@
+<%- include("../partials/Img/header") %>
+<%- include("../partials/Img/navbar") %>
+	
+<div class="imgdis"><img src="data:image/<%= image.contentType %>;base64,<%= image.imageBase64 %>"  class="imgx"></div>
+	<div class="edel">
+		<span><a class="btn btn-xs btn-outline-warning" href="/Images/<%= image._id %>/edit">Edit</a></span>
+		<span><form class="delete-form" action="/Images/<%= image._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-outline-danger">Delete</button>
+        </form></span>
+	</div>
+<%- include("../partials/Img/footer") %>

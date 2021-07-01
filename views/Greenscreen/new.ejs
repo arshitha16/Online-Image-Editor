@@ -1,0 +1,29 @@
+<%- include("../partials/Img/header") %>
+<%- include("../partials/Img/navbar") %>
+<div class="container text-center">
+		<div class="title py-5">
+			<h1>
+				Green screen <i class="fas fa-exchange-alt fa-sm"></i>
+			</h1>
+			<hr>
+		</div>
+</div>
+<div class="container" id="container">
+	<canvas id="fgcan" class="canvas"></canvas>
+	<canvas id="bgcan" class="canvas"></canvas>
+</div>
+<div id = "site">
+	<p>
+		<label for="fgfile">Foreground:</label>
+		 <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" name="fgfile" class="btn btn-dark">
+		<label for="bgfile" id="label2">Background:</label>
+		<input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" name="bgfile" class="btn btn-dark">
+	</p>
+<p>
+	<input type="button" class="btn btn-info" value="Create" onclick="doGreenScreen()" id="ip">
+	<input type="button" class="btn btn-info" value="clear" onclick="clearCanvas()" id="ip">
+	<input type="button"  class="btn btn-dark" value="Download" onclick="download_image()">
+</p>
+</div>
+<script type="text/javascript"  src="../../scripts/greenscreen.js"></script>
+<%- include("../partials/Img/footer") %>
